@@ -132,3 +132,12 @@ every historical result cited in the accompanying manuscript.
 Citation metadata is provided in [`CITATION.cff`](CITATION.cff). For a paper,
 please cite both the accompanying article and the immutable repository release
 or commit used for verification.
+
+## License
+
+Copyright 2026 Qianli Ma.
+
+The Lean source, Python regression programs, and repository support files are
+licensed under the [Apache License 2.0](LICENSE). The accompanying article is
+not distributed in this repository and is not covered by this software
+license.
