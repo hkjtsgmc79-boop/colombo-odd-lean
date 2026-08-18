@@ -9,6 +9,7 @@ authors:
 repository-code: "https://github.com/hkjtsgmc79-boop/colombo-odd-lean"
 url: "https://github.com/hkjtsgmc79-boop/colombo-odd-lean"
 version: "0.1.0"
+license: "Apache-2.0"
 preferred-citation:
   type: unpublished
   title: "The Odd-Exponent Branch of Colombo's Determinant Problem"
