@@ -1,0 +1,15 @@
+/.lake/
+/.elan/
+/.vscode/
+/.idea/
+.DS_Store
+*.olean
+*.ilean
+*.o
+*.c
+*.aux
+*.log
+*.out
+*.pdf
+__pycache__/
+*.pyc

@@ -1,0 +1,13 @@
+import ColomboGeneralK2
+
+#check ColomboGeneralK2.Odd.pairedSplitNonnegative_critical
+#check ColomboGeneralK2.Odd.pairedSplitNonnegative_of_threshold
+#check ColomboGeneralK2.Odd.splitDet_nonnegative
+#check ColomboGeneralK2.Odd.odd_colombo_pfaffian_sign
+#check ColomboGeneralK2.Odd.odd_colombo_determinant_positive
+
+#print axioms ColomboGeneralK2.Odd.pairedSplitNonnegative_critical
+#print axioms ColomboGeneralK2.Odd.pairedSplitNonnegative_of_threshold
+#print axioms ColomboGeneralK2.Odd.splitDet_nonnegative
+#print axioms ColomboGeneralK2.Odd.odd_colombo_pfaffian_sign
+#print axioms ColomboGeneralK2.Odd.odd_colombo_determinant_positive
