@@ -129,9 +129,19 @@ every historical result cited in the accompanying manuscript.
 
 ## Citation
 
-Citation metadata is provided in [`CITATION.cff`](CITATION.cff). For a paper,
-please cite both the accompanying article and the immutable repository release
-or commit used for verification.
+**Preprint:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21993537.svg)](https://doi.org/10.5281/zenodo.21993537)
+
+The accompanying preprint v1 is archived on Zenodo under the version-specific
+DOI [`10.5281/zenodo.21993537`](https://doi.org/10.5281/zenodo.21993537).
+The concept DOI [`10.5281/zenodo.21993536`](https://doi.org/10.5281/zenodo.21993536)
+resolves to the latest version of that preprint.
+
+The Zenodo preprint record archives the manuscript PDF and links to this
+repository; it is not a software-archive DOI for the Lean source.
+
+Citation metadata is provided in [`CITATION.cff`](CITATION.cff). Please cite
+the version-specific preprint DOI for the mathematical result and an immutable
+repository release or commit for the Lean formalization.
 
 ## License
 

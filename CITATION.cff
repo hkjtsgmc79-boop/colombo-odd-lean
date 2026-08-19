@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this formalization, please cite the accompanying article and this repository release."
+message: "If you use this formalization, please cite the accompanying article and the repository commit or release used for verification."
 title: "Lean 4 formalization of the odd-exponent branch of Colombo's determinant problem"
 type: software
 authors:
@@ -12,9 +12,11 @@ version: "0.1.0"
 license: "Apache-2.0"
 preferred-citation:
   type: unpublished
-  title: "The Odd-Exponent Branch of Colombo's Determinant Problem"
+  title: "Colombo's Determinant Problem"
   authors:
     - family-names: "Ma"
       given-names: "Qianli"
       orcid: "https://orcid.org/0009-0004-8256-0999"
+  doi: "10.5281/zenodo.21993537"
+  url: "https://doi.org/10.5281/zenodo.21993537"
   year: 2026
