@@ -1,5 +1,4 @@
-import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
-import Mathlib.Order.Monotone.Defs
+import Mathlib
 
 /-!
 # Odd-exponent branch of Colombo's determinant problem
