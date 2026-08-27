@@ -1,9 +1,17 @@
 name = "ColomboGeneralK2"
 version = "0.1.0"
-defaultTargets = ["ColomboGeneralK2"]
+defaultTargets = ["ColomboGeneralK2", "Challenge", "Solution"]
 
 [[lean_lib]]
 name = "ColomboGeneralK2"
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]
 
 [[require]]
 name = "mathlib"

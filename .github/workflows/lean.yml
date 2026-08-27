@@ -2,7 +2,7 @@ name: Lean verification
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "codex/palomar-submission"]
   pull_request:
     branches: ["main"]
   workflow_dispatch:

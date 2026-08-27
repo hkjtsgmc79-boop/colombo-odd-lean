@@ -1,0 +1,146 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Odd-exponent branch of Colombo's determinant problem"
+  description: >-
+    This project formalizes the odd-exponent branch of Colombo's determinant
+    problem for even matrix size. For every m at least one, every strictly
+    increasing x : Fin (2*m) → ℝ, and every r at least m - 1, it proves
+    that the determinant of the matrix with entries
+    (x_j - x_i)^(2*r+1) is strictly positive. The proof development passes
+    through paired truncated-power determinants, B-spline and Marsden
+    factorization, total nonnegativity, Volterra propagation, and
+    Beta--de Bruijn and Pfaffian identities.
+  authors:
+    - "Qianli Ma"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Qianli Ma"
+
+classification:
+  arxiv: ["math.CA", "math.CO"]
+  msc2020: ["15A15", "15B48", "41A15"]
+
+sources:
+  - title: "Colombo's Determinant Problem"
+    authors:
+      - "Qianli Ma"
+    id: "doi:10.5281/zenodo.21993537"
+    type: "paper"
+    location: "Zenodo preprint, version 1"
+    relationship: "formalizes"
+    note: "The repository formalizes the main theorem and its proof chain."
+    author_endorsement: "participated"
+  - title: "Problemi per le equazioni alle derivate parziali di tipo iperbolico"
+    authors:
+      - "B. Colombo"
+    contributors:
+      - name: "B. Colombo"
+        role: "problem proposer"
+    id: "https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1928.3/ICM1928.3.ocr.pdf"
+    type: "paper"
+    location: "Proceedings of the 1928 International Congress of Mathematicians, volume III"
+    relationship: "background"
+    note: "The 1928 ICM communication posed the determinant problem."
+
+related_formalizations: []
+
+status:
+  scope: >-
+    The compared theorem proves strict determinant positivity for all
+    admissible odd exponents D = 2*r+1 and strictly increasing real nodes of
+    even cardinality 2*m. The repository additionally proves the fixed
+    Pfaffian sign and supporting paired-split determinant inequalities, but
+    those auxiliary theorem families are not separately selected in this
+    Comparator entry. It does not formalize the even-exponent branch or every
+    historical result cited in the manuscript.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+
+automation:
+  methods:
+    - method: "agent"
+      models:
+        - "GPT-5.6 Sol"
+        - "GPT-5.5"
+        - "DeepSeek-V4-Pro Max"
+        - "Qwen"
+        - "Kimi"
+      framework: "Codex and WuJie AI multi-agent orchestration"
+      tool_setup: >-
+        AI agents were used for literature discovery, proof-route
+        exploration, Lean code generation, compile-repair loops, code review,
+        and independent semantic red-team checks.
+      cost:
+        wall_time: >-
+          Approximately 40 hours of net agent work; the elapsed period of
+          human orchestration was longer.
+        spend_usd: "not tracked"
+        hardware: >-
+          Local development machines and remote inference services; exact
+          allocation was not tracked.
+      prompting_notes: >-
+        The author decomposed the project into bounded proof gates, compared
+        multiple candidate routes, allocated computation adaptively, and
+        required build and semantic-review gates before accepting results.
+    - method: "manual"
+      models: []
+      framework: "n/a"
+      tool_setup: >-
+        The author selected the problem and proof route, coordinated the
+        research workflow, checked mathematical statements and citations,
+        and reviewed the final Lean interfaces and audit reports.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not applicable"
+        hardware: "n/a"
+      prompting_notes: "n/a"
+  spend_usd: "not tracked"
+  notes: >-
+    The proof strategy and initial proof development were substantially
+    AI-assisted. Qianli Ma designed and coordinated the workflow and performed
+    the final mathematical and repository review. The production tree was
+    subjected to full builds, source scans, axiom audits, exact finite
+    regression guards, and independent AI semantic red-team reviews.
+
+fidelity:
+  divergences: >-
+    No known divergence affects the compared determinant theorem. The
+    formalization uses a project-defined recursive Pfaffian internally and
+    proves the determinant consequence. The manuscript's descriptive reverse
+    direction for one Volterra support biconditional is not separately exposed
+    as a Lean theorem; only the direction used in the proof is formalized. The
+    repository does not formalize every historical background theorem.
+
+review:
+  status: "self-assessed with informal expert manuscript feedback"
+  reviewers:
+    - "Qianli Ma"
+    - "Fei Yu"
+  notes: >-
+    Qianli Ma reviewed the mathematical claims, proof interfaces, citations,
+    and Lean audit results. Professor Fei Yu of Zhejiang University read an
+    earlier version of the proof and provided mathematical and expository
+    guidance. This feedback is not presented as journal peer review. Multiple
+    AI agents also performed independent semantic red-team reviews.
+
+alignment:
+  namespace: "ColomboPalomar"
+  statements:
+    - source: "Main determinant conclusion"
+      lean: "ColomboPalomar.odd_colombo_determinant_positive"
+      module: "Solution"
+      status: "proved"
+      note: >-
+        This is the strictly ordered-node form of the odd-exponent determinant
+        conclusion: for m at least one and r at least m - 1, the determinant
+        of the 2*m by 2*m matrix with entries
+        (x_j - x_i)^(2*r+1) is positive.
+
+acknowledgements: >-
+  The formalization uses Lean 4 and Mathlib. The author thanks Professor Fei
+  Yu for suggesting the problem and for discussions and guidance on the
+  structure of the argument. AI-assisted research and coding tools included
+  Codex, the WuJie AI agent, DeepSeek, Qwen, Kimi, and GPT-family models.
